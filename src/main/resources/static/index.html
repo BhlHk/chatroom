@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <title>CHATROOM MASTER ISI</title>
+    <!-- Titre : Salle de chat Master ISI -->
+    <link rel="stylesheet" href="/css/main.css" />
+    <!-- Lien vers le fichier CSS principal -->
+
+</head>
+<body>
+
+<!-- Page pour entrer le nom d'utilisateur -->
+<div id="username-page">
+<div class="username-page-container">
+    <img   
+       src="/img/SEMLALIA-FS_Logo_1.png"   
+       alt="Logo"   
+       width="400"   
+       height="100"   
+       style="display: block; margin: 0 auto;"  
+    >  
+    <!-- Titre de la page -->
+    <h1 class="title" style="font-size: 15px;">Entrez votre nom d'utilisateur pour rejoindre la salle de chat MASTER ISI</h1>
+    <form id="usernameForm" name="usernameForm">
+        <div class="form-group">
+            <input type="text" id="name" placeholder="Nom d'utilisateur" autocomplete="off" class="form-control" />
+        </div>
+        <div class="form-group">
+            <button type="submit" class="accent username-submit">Rejoindre</button>
+        </div>
+    </form>
+
+</div>    
+</div>
+
+<!-- Page de discussion -->
+<div id="chat-page" class="hidden">
+    <div class="chat-container">
+        <!-- En-tête de la salle de chat -->
+		
+
+		<div class="chat-header" style="display: flex; align-items: center; justify-content: center; background-color: #f8f8f8; padding: 10px;">
+		 
+		    <!-- Image circulaire avec fond noir -->
+		    <div 
+		        style="
+		            width: 70px; 
+		            height: 70px; 
+		            background-color: gainsboro; 
+		            border-radius: 50%; 
+		            display: flex; 
+		            align-items: center; 
+		            justify-content: center;
+		            margin-right: 10px;">
+		        <img 
+		            src="/img/semlogo.png" 
+		            alt="Logo ChatROOM" 
+		            style="
+		                width: 100px; 
+		                height: 50px; 
+		                border-radius: 50%; 
+		                object-fit: cover;" />
+		    </div>
+		    <!-- Titre stylisé -->
+		    <h2 
+		        style="
+		            font-size: 20px; 
+		            font-weight: bold; 
+		            color: #333; 
+		            font-family: Arial, sans-serif;">
+		        ChatROOM MASTER ISI
+		    </h2>
+		</div>
+        <!-- Indicateur de connexion -->
+        <div class="connecting">
+            Connexion...
+        </div>
+        <!-- Zone des messages -->
+        <ul id="messageArea"></ul>
+        <form id="messageForm" name="messageForm">
+            <div class="form-group">
+                <div class="input-group clearfix">
+                    <input type="text" id="message" placeholder="Tapez un message..." autocomplete="off" class="form-control" />
+                    <button type="submit" class="primary">Envoyer</button>
+                </div>
+            </div>
+        </form>
+
+    </div>
+</div>
+
+<!-- Bibliothèques JavaScript nécessaires -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/sockjs-client/1.1.4/sockjs.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js"></script>
+<script src="/js/main.js"></script>
+
+</body>
+</html>
